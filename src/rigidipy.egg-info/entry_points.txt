@@ -1,0 +1,3 @@
+[console_scripts]
+rigidipy = rigidipy.rigidipy:main
+

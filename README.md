@@ -1,0 +1,1 @@
+Compute rigidity from a PDB file.
