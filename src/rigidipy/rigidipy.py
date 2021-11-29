@@ -5,18 +5,21 @@ import sys
 import os
 
 from importlib import resources
+from sys import platform
 
 def get_path(pdb):
+    if platform == "linux" or platform == "linux2":
+        with resources.path("rigidipy.bin", "calc_rigidity_gcc4.8.4.bin") as f:
+            data_file_path = f
+    elif platform == "darwin":
+        with resources.path("rigidipy.bin", "calc_rigidity_OSX.bin") as f:
+            data_file_path = f
+    elif platform == "win32":
+        print('ANSURR will not yet run on Windows')
+        sys.exit(0)
 
-
-    with resources.path("rigidipy.bin", "calc_rigidity_gcc4.8.4.bin") as f:
-        data_file_path = f
     lib_location = os.path.dirname(data_file_path)
-    print(lib_location)
-
-    
     subprocess.call([data_file_path, pdb, lib_location])
-
    
 def main():
 

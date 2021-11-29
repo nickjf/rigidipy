@@ -11,6 +11,7 @@ src/rigidipy.egg-info/entry_points.txt
 src/rigidipy.egg-info/requires.txt
 src/rigidipy.egg-info/top_level.txt
 src/rigidipy/bin/__init__.py
+src/rigidipy/bin/calc_rigidity_OSX.bin
 src/rigidipy/bin/calc_rigidity_gcc4.8.4.bin
 src/rigidipy/bin/lib/__init__.py
 src/rigidipy/bin/lib/distance_cutoffs.txt
